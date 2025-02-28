@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I'm My Own Grandpa - Progressive Family Network</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <div class="container">
+    <h1>"I'm My Own Grandpa" Family Progression</h1>
+    <p class="subtitle">Visualizing the song's relationships as they develop</p>
+    
+    <div class="timeline-container">
+      <div class="slider-container">
+        <div class="progress-label">Song Progress: <span id="progress-value">0%</span></div>
+        <input type="range" min="0" max="100" value="0" class="slider" id="progress-slider">
+        <div class="markers">
+          <div class="marker">Start</div>
+          <div class="marker">Marriage</div>
+          <div class="marker">Father's<br>Marriage</div>
+          <div class="marker">Baby<br>Boy</div>
+          <div class="marker">Widow's<br>Son</div>
+          <div class="marker">Conclusion</div>
+        </div>
+      </div>
+      
+      <div class="controls">
+        <button id="play-btn" class="play-btn">▶ Play Timeline</button>
+        <button id="pause-btn" disabled>⏸ Pause</button>
+        <button id="reset-btn" class="reset-btn">↺ Reset</button>
+      </div>
+    </div>
+    
+    <div class="main-content">
+      <div class="top-section">
+        <div id="network" class="network-container"></div>
+        <div class="lyrics-container" id="lyrics-display">
+          <h3>Current Story Events</h3>
+          <div id="current-events"></div>
+          
+          <h3>Song Lyrics</h3>
+          <div id="lyrics-content"></div>
+        </div>
+      </div>
+      
+      <div class="legend">
+        <h3>Relationship Legend</h3>
+        <div class="legend-items">
+          <div class="legend-item">
+            <div class="legend-color" style="background-color: #FF9999;"></div>
+            <div>Marriage</div>
+          </div>
+          <div class="legend-item">
+            <div class="legend-color" style="background-color: #99CCFF;"></div>
+            <div>Parent/Child</div>
+          </div>
+          <div class="legend-item">
+            <div class="legend-color" style="background-color: #66BB6A;"></div>
+            <div>Sibling Relationship</div>
+          </div>
+          <div class="legend-item">
+            <div class="legend-color" style="background-color: #FFC107;"></div>
+            <div>Step Relationship</div>
+          </div>
+          <div class="legend-item">
+            <div class="legend-color" style="background-color: #ff07de;"></div>
+            <div>Granda/Grandchild</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div id="tooltip" class="tooltip"></div>
+  </div>
+</body>
+</html>
